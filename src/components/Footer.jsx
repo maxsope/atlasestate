@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-10">
         <div className="flex flex-col gap-6">
           <a href="/" className="inline-block opacity-80 hover:opacity-100 transition-opacity">
-            <img src="/atlas-logo.png" alt="ATLAS" className="h-10 md:h-12 object-contain" />
+            <img src="./atlas-logo.png" alt="ATLAS" className="h-10 md:h-12 object-contain" />
           </a>
           <p className="text-ivory/50 font-sans font-light leading-relaxed text-sm max-w-sm">
             {t('footDesc')}

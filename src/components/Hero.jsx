@@ -67,7 +67,7 @@ export default function Hero() {
         <div ref={rightRef} className="w-full md:w-[45%] relative mt-16 md:mt-0">
           <div className="w-full aspect-[4/5] rounded-[2rem] overflow-hidden border border-ivory/10 bg-slate relative group shadow-2xl shadow-obsidian">
             <img 
-              src="/maxim-hero.jpg" 
+              src="./maxim-hero.jpg" 
               alt="Риелтор Максим - ATLAS" 
               className="w-full h-full object-cover object-top transition-all duration-700"
             />

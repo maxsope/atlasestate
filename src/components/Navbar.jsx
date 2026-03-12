@@ -32,7 +32,7 @@ export default function Navbar() {
     <div className="fixed top-0 left-0 w-full flex justify-center z-50 pointer-events-none">
       <nav ref={navRef} className="w-full flex items-center justify-between px-4 md:px-12 py-4 md:py-6 pointer-events-auto transition-colors duration-500 ease-in-out border border-transparent/10">
         <a href="/" className="flex items-center shrink-0">
-          <img src="/atlas-logo.png" alt="ATLAS" className="h-6 sm:h-8 md:h-10 object-contain hover:opacity-80 transition-opacity" />
+          <img src="./atlas-logo.png" alt="ATLAS" className="h-6 sm:h-8 md:h-10 object-contain hover:opacity-80 transition-opacity" />
         </a>
         <div className="hidden md:flex gap-8 text-sm font-medium tracking-widest uppercase">
           <a href="#features" className="hover:text-champagne transition-colors">{t('navMethod')}</a>
