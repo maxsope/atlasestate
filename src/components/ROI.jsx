@@ -32,15 +32,15 @@ export default function ROI() {
 
       // 2. Появление убыточного сценария слева
       tl.fromTo(leftColRef.current,
-        { x: -30, opacity: 0, filter: 'blur(5px)' },
-        { x: 0, opacity: 1, filter: 'blur(0px)', duration: 0.8, ease: 'power2.out' },
+        { x: -30, opacity: 0 },
+        { x: 0, opacity: 1, duration: 0.8, ease: 'power2.out' },
         "-=0.5"
       );
 
       // 3. Появление профитного сценария справа
       tl.fromTo(rightColRef.current,
-        { x: 30, opacity: 0, filter: 'blur(5px)' },
-        { x: 0, opacity: 1, filter: 'blur(0px)', duration: 0.8, ease: 'power2.out' },
+        { x: 30, opacity: 0 },
+        { x: 0, opacity: 1, duration: 0.8, ease: 'power2.out' },
         "-=0.4"
       );
 
@@ -86,7 +86,7 @@ export default function ROI() {
                {/* Bad Math */}
                <div ref={leftColRef} className="space-y-6">
                   <div className="mb-8 border-b border-ivory/10 pb-4">
-                     <p className="font-sans text-xs uppercase tracking-widest text-ivory/40">{t('roiSelfTitle')}</p>
+                     <p className="font-sans text-xs uppercase tracking-widest text-red-500 font-medium">{t('roiSelfTitle')}</p>
                   </div>
                   
                   <div className="space-y-6">
@@ -98,13 +98,10 @@ export default function ROI() {
                         <span className="text-sm text-ivory/60 font-light">{t('roiSelf2')} <span className="text-ivory/30 text-xs">{t('roiSelf2Extra')}</span></span>
                         <span className="font-mono text-red-500/80">-$1,200</span>
                      </div>
-                     <div className="w-full h-1 bg-red-500/10 rounded-full mt-2 overflow-hidden">
-                        <div ref={el => barRefs.current[0] = el} className="h-full bg-red-500/50 w-0" data-width="100%"></div>
-                     </div>
                   </div>
 
-                  <div className="mt-10 pt-6 border-t border-ivory/10 flex justify-between items-end">
-                     <span className="text-xs uppercase tracking-widest text-ivory/40">{t('roiSelfTotal')}</span>
+                  <div className="mt-10 flex justify-between items-end">
+                     <span className="text-xs uppercase tracking-widest text-red-500 font-medium">{t('roiSelfTotal')}</span>
                      <div className="text-right">
                         <span className="block text-2xl md:text-4xl font-mono text-red-500" ref={el => numsRef.current[0] = el} data-val="-2200">-$2,200</span>
                      </div>
@@ -115,7 +112,6 @@ export default function ROI() {
                <div ref={rightColRef} className="space-y-6 md:border-l md:border-ivory/5 md:pl-20 relative">
                   <div className="mb-8 border-b border-champagne/20 pb-4 flex justify-between items-center">
                      <p className="font-sans text-xs uppercase tracking-widest text-champagne">{t('roiAtlasTitle')}</p>
-                     <div className="w-2 h-2 rounded-full bg-champagne animate-pulse"></div>
                   </div>
                   
                   <div className="space-y-6 relative z-10">
@@ -127,12 +123,9 @@ export default function ROI() {
                         <span className="text-sm text-ivory/80 font-light">{t('roiAtlas2')}</span>
                         <span className="font-mono text-champagne">+$1,200</span>
                      </div>
-                     <div className="w-full h-1 bg-champagne/10 rounded-full mt-2 overflow-hidden">
-                        <div ref={el => barRefs.current[1] = el} className="h-full bg-champagne w-0" data-width="40%"></div>
-                     </div>
                   </div>
 
-                  <div className="mt-10 pt-6 border-t border-champagne/20 flex justify-between items-end relative z-10">
+                  <div className="mt-10 flex justify-between items-end relative z-10">
                      <span className="text-xs uppercase tracking-widest text-champagne/50">{t('roiAtlasTotal')}</span>
                      <div className="text-right">
                         <span className="block text-2xl md:text-4xl font-mono text-champagne" ref={el => numsRef.current[2] = el} data-val="1700">+$1,700</span>

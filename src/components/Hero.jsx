@@ -20,7 +20,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section ref={containerRef} className="relative w-full min-h-[100dvh] flex items-center justify-center pt-32 pb-16 overflow-hidden bg-obsidian border-b border-ivory/5">
+    <section ref={containerRef} className="relative w-full min-h-[100dvh] flex items-center justify-center pt-20 md:pt-32 pb-16 overflow-hidden bg-obsidian border-b border-ivory/5">
       
       {/* Background glow behind the photo */}
       <div className="absolute top-1/2 right-0 md:right-10 w-[80vw] md:w-[40vw] h-[80vw] md:h-[40vw] bg-champagne/5 rounded-full blur-[120px] pointer-events-none -translate-y-1/2" />
@@ -28,7 +28,7 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto w-full px-6 md:px-12 flex flex-col md:flex-row items-center relative z-10 gap-16">
         
         {/* Left Content: Hook & Copy */}
-        <div className="w-full md:w-[55%] flex flex-col items-start mt-10 md:mt-0">
+        <div className="w-full md:w-[55%] flex flex-col items-start mt-0">
           <div ref={badgeRef} className="flex items-center gap-3 bg-slate/30 border border-ivory/10 px-4 py-2 rounded-full mb-8">
             <span className="w-2 h-2 rounded-full bg-champagne block animate-pulse"></span>
             <span className="text-[10px] uppercase font-mono tracking-widest text-ivory/80">{t('heroBadge')}</span>
