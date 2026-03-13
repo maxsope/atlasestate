@@ -62,7 +62,7 @@ export default function Goal() {
       </div>
 
       {/* Background visual element */}
-      <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-champagne/5 rounded-full blur-[100px] pointer-events-none -translate-y-1/2 opacity-50" />
+      <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-champagne/5 rounded-full blur-[60px] md:blur-[100px] pointer-events-none -translate-y-1/2 opacity-50" />
     </section>
   );
 }

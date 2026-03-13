@@ -23,7 +23,7 @@ export default function Hero() {
     <section ref={containerRef} className="relative w-full min-h-[100dvh] flex items-center justify-center pt-20 md:pt-32 pb-16 overflow-hidden bg-obsidian border-b border-ivory/5">
       
       {/* Background glow behind the photo */}
-      <div className="absolute top-1/2 right-0 md:right-10 w-[80vw] md:w-[40vw] h-[80vw] md:h-[40vw] bg-champagne/5 rounded-full blur-[120px] pointer-events-none -translate-y-1/2" />
+      <div className="absolute top-1/2 right-0 md:right-10 w-[80vw] md:w-[40vw] h-[80vw] md:h-[40vw] bg-champagne/5 rounded-full blur-[60px] md:blur-[120px] pointer-events-none -translate-y-1/2" />
 
       <div className="max-w-7xl mx-auto w-full px-6 md:px-12 flex flex-col md:flex-row items-center relative z-10 gap-16">
         
@@ -79,14 +79,14 @@ export default function Hero() {
                   <h3 className="font-serif italic text-3xl text-ivory">{t('heroName')}</h3>
                   <p className="font-mono text-[10px] uppercase tracking-widest text-champagne mt-1">{t('heroRole')}</p>
                </div>
-               <div className="w-12 h-12 rounded-full bg-obsidian/50 backdrop-blur-md border border-ivory/10 flex items-center justify-center text-champagne">
+               <div className="w-12 h-12 rounded-full bg-obsidian/90 border border-ivory/10 flex items-center justify-center text-champagne">
                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                </div>
             </div>
           </div>
           
           {/* Decorative floating element */}
-          <div className="absolute top-12 -right-4 md:-right-8 bg-slate/40 backdrop-blur-md border border-ivory/10 p-4 rounded-2xl animate-[float_6s_ease-in-out_infinite] z-20 shadow-xl">
+          <div className="absolute top-12 -right-4 md:-right-8 bg-slate/90 border border-ivory/10 p-4 rounded-2xl animate-[float_6s_ease-in-out_infinite] z-20 shadow-xl">
             <div className="flex gap-1.5 items-center mb-1.5">
               {[1,2,3,4,5].map(i => <svg key={i} width="12" height="12" viewBox="0 0 24 24" fill="#C9A84C"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>)}
             </div>

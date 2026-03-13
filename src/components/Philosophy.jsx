@@ -44,7 +44,7 @@ export default function Philosophy() {
 
   return (
     <section id="philosophy" ref={containerRef} className="py-32 px-6 md:px-12 relative overflow-hidden bg-obsidian">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] bg-champagne/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] bg-champagne/5 rounded-full blur-[60px] md:blur-[120px] pointer-events-none" />
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div ref={titleRef} className="text-center mb-24">
@@ -59,7 +59,7 @@ export default function Philosophy() {
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch">
           
           {/* Default Approach */}
-          <div ref={leftRef} className="flex-1 rounded-[3rem] p-10 md:p-14 border border-red-500/10 bg-slate/10 backdrop-blur-md relative overflow-hidden group">
+          <div ref={leftRef} className="flex-1 rounded-[3rem] p-10 md:p-14 border border-red-500/10 bg-slate/10 relative overflow-hidden group">
             <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity duration-500 font-mono text-9xl text-red-500">
               -
             </div>
@@ -96,7 +96,7 @@ export default function Philosophy() {
           </div>
 
           {/* ATLAS Protocol */}
-          <div ref={rightRef} className="flex-1 rounded-[3rem] p-10 md:p-14 border border-champagne/30 bg-champagne/5 backdrop-blur-md relative overflow-hidden group hover:bg-champagne/10 transition-colors duration-500 shadow-[0_0_50px_rgba(201,168,76,0.05)] hover:shadow-[0_0_80px_rgba(201,168,76,0.1)]">
+          <div ref={rightRef} className="flex-1 rounded-[3rem] p-10 md:p-14 border border-champagne/30 bg-champagne/5 relative overflow-hidden group hover:bg-champagne/10 transition-colors duration-500 shadow-none md:shadow-[0_0_50px_rgba(201,168,76,0.05)] hover:shadow-none md:hover:shadow-[0_0_80px_rgba(201,168,76,0.1)]">
              <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity duration-500 font-mono text-9xl text-champagne">
               +
             </div>

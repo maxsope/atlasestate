@@ -59,7 +59,7 @@ export default function Features() {
             <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600&q=80')] bg-cover bg-center transition-all duration-1000 origin-left" />
             <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1600607686527-6fb886090705?w=600&q=80')] bg-cover bg-center w-[0%] group-hover:w-[100%] transition-all duration-[1500ms] ease-in-out border-r border-champagne z-10" />
             <div className="absolute inset-0 flex items-center justify-center z-20 pointer-events-none">
-              <span className="bg-obsidian/80 backdrop-blur-md px-4 py-2 rounded-full text-xs font-mono text-champagne uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-1000 delay-500">
+              <span className="bg-obsidian/90 px-4 py-2 rounded-full text-xs font-mono text-champagne uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-1000 delay-500">
                 Staged
               </span>
             </div>
@@ -110,7 +110,7 @@ export default function Features() {
                <div className="absolute w-2 h-2 rounded-full bg-champagne group-hover:animate-ping duration-1000"></div>
                <div className="text-sm font-mono text-champagne/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 mt-16 pb-4">REACH</div>
             </div>
-            <div className="absolute bottom-4 left-4 right-4 flex justify-between items-center bg-slate/40 backdrop-blur-md rounded-full px-4 py-2 border border-ivory/10 translate-y-[150%] group-hover:translate-y-0 transition-transform duration-500 ease-out">
+            <div className="absolute bottom-4 left-4 right-4 flex justify-between items-center bg-slate/80 rounded-full px-4 py-2 border border-ivory/10 translate-y-[150%] group-hover:translate-y-0 transition-transform duration-500 ease-out">
                <span className="text-[10px] uppercase tracking-wider font-mono">{t('featReach')}</span>
                <span className="w-2 h-2 rounded-full bg-champagne animate-pulse"></span>
             </div>

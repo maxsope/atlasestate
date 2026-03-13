@@ -75,7 +75,7 @@ export default function ServicesMatrix() {
 
   return (
     <section id="services" ref={containerRef} className="py-32 px-6 md:px-12 bg-obsidian relative border-y border-ivory/5 z-20">
-      <div className="absolute top-0 right-0 w-[50vw] h-[50vw] bg-champagne/5 rounded-full blur-[150px] pointer-events-none -translate-y-1/2 translate-x-1/3" />
+      <div className="absolute top-0 right-0 w-[50vw] h-[50vw] bg-champagne/5 rounded-full blur-[80px] md:blur-[150px] pointer-events-none -translate-y-1/2 translate-x-1/3" />
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="mb-24 md:flex justify-between items-end gap-10">
