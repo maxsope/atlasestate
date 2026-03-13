@@ -55,7 +55,7 @@ export default function Hero() {
                 </div>
                 <div className="w-[1px] h-10 bg-ivory/10"></div>
                 <div className="flex flex-col">
-                  <span className="font-mono text-2xl text-ivory font-bold">0</span>
+                  <span className="font-mono text-2xl text-ivory font-bold">4</span>
                   <span className="text-[9px] uppercase tracking-widest mt-1">{t('heroStats2')}</span>
                 </div>
               </div>

@@ -12,31 +12,20 @@ export default function Protocol() {
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      // Pinning the cards as they scroll into view
       itemsRef.current.forEach((card, i) => {
-        ScrollTrigger.create({
-          trigger: card,
-          start: `top top+=${100 + i * 20}`, // Offset to see the previous card's top edge
-          endTrigger: containerRef.current,
-          end: 'bottom bottom',
-          pin: true,
-          pinSpacing: false,
-        });
-
-        // Fade out previous cards slightly
-        if (i !== itemsRef.current.length - 1) {
-          gsap.to(card, {
-            scale: 0.95,
-            opacity: 0.5,
-            ease: "none",
+        gsap.fromTo(card, 
+          { y: 100, opacity: 0 },
+          {
             scrollTrigger: {
-              trigger: itemsRef.current[i + 1],
-              start: "top center",
-              end: "top top",
-              scrub: true,
-            }
-          });
-        }
+              trigger: card,
+              start: 'top 80%',
+            },
+            y: 0,
+            opacity: 1,
+            duration: 1,
+            ease: 'power3.out'
+          }
+        );
       });
     }, containerRef);
     return () => ctx.revert();
@@ -70,7 +59,7 @@ export default function Protocol() {
   ];
 
   return (
-    <section id="protocol" ref={containerRef} className="pb-[40vh] pt-32 px-6 relative bg-obsidian">
+    <section id="protocol" ref={containerRef} className="pb-32 pt-32 px-6 relative bg-obsidian">
       <div className="max-w-4xl mx-auto">
         <div className="mb-24 text-center">
           <h2 className="text-4xl md:text-6xl font-sans font-medium uppercase tracking-[0.1em] mb-4 text-ivory">
@@ -83,8 +72,7 @@ export default function Protocol() {
             <div
               key={index}
               ref={(el) => (itemsRef.current[index] = el)}
-              className="w-full bg-slate border border-ivory/10 rounded-[2.5rem] p-8 md:p-12 mb-10 md:mb-20 origin-top flex flex-col md:flex-row gap-10 shadow-2xl relative"
-              style={{ zIndex: index, minHeight: '600px' }}
+              className="w-full bg-slate border border-ivory/10 rounded-[2.5rem] p-8 md:p-12 mb-10 md:mb-20 flex flex-col md:flex-row gap-10 shadow-2xl relative"
             >
               <div className="w-full md:w-1/2 flex flex-col justify-center">
                 <span className="font-mono text-[10px] text-champagne uppercase tracking-widest">{t('protPhase')} 0{index + 1}</span>

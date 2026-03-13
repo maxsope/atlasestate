@@ -9,6 +9,7 @@ import ServicesMatrix from './components/ServicesMatrix';
 import Philosophy from './components/Philosophy';
 import ROI from './components/ROI';
 import Protocol from './components/Protocol';
+import Goal from './components/Goal';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 
@@ -33,6 +34,7 @@ function App() {
         <Philosophy />
         <ROI />
         <Protocol />
+        <Goal />
         <CTA />
       </main>
       <Footer />
