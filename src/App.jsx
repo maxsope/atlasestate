@@ -15,6 +15,15 @@ import Footer from './components/Footer';
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Optimize scroll animations on mobile devices
+ScrollTrigger.config({
+  ignoreMobileResize: true, // Prevents sudden recalculations when address bar hides/shows
+});
+
+gsap.defaults({
+  force3D: true, // Force GPU acceleration
+});
+
 function App() {
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {

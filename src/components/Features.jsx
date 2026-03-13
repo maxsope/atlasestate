@@ -14,17 +14,17 @@ export default function Features() {
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       gsap.fromTo(cardsRef.current, 
-        { y: 100, opacity: 0 },
+        { y: 50, opacity: 0 },
         {
           scrollTrigger: {
             trigger: containerRef.current,
-            start: 'top 70%',
+            start: 'top 75%',
           },
           y: 0,
           opacity: 1,
-          duration: 1,
-          stagger: 0.15,
-          ease: 'power3.out'
+          duration: 1.2,
+          stagger: 0.1,
+          ease: 'power2.out'
         }
       );
     }, containerRef);

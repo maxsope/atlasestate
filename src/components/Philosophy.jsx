@@ -16,26 +16,26 @@ export default function Philosophy() {
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       gsap.fromTo(titleRef.current, 
-        { y: 50, opacity: 0 },
+        { y: 30, opacity: 0 },
         {
           scrollTrigger: { trigger: containerRef.current, start: 'top 80%' },
-          y: 0, opacity: 1, duration: 1, ease: 'power3.out'
+          y: 0, opacity: 1, duration: 1, ease: 'power2.out'
         }
       );
       
       gsap.fromTo(leftRef.current, 
-        { x: -50, opacity: 0 },
+        { x: -30, opacity: 0 },
         {
-          scrollTrigger: { trigger: containerRef.current, start: 'top 60%' },
-          x: 0, opacity: 1, duration: 1, ease: 'power3.out'
+          scrollTrigger: { trigger: containerRef.current, start: 'top 70%' },
+          x: 0, opacity: 1, duration: 1, ease: 'power2.out'
         }
       );
 
       gsap.fromTo(rightRef.current, 
-        { x: 50, opacity: 0 },
+        { x: 30, opacity: 0 },
         {
-          scrollTrigger: { trigger: containerRef.current, start: 'top 60%' },
-          x: 0, opacity: 1, duration: 1, ease: 'power3.out', delay: 0.2
+          scrollTrigger: { trigger: containerRef.current, start: 'top 70%' },
+          x: 0, opacity: 1, duration: 1, ease: 'power2.out', delay: 0.1
         }
       );
     }, containerRef);

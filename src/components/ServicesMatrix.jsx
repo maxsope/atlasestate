@@ -14,10 +14,7 @@ export default function ServicesMatrix() {
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       gsap.fromTo(cardsRef.current, 
-        {
-          y: 80,
-          opacity: 0
-        },
+        { y: 50, opacity: 0 },
         {
           scrollTrigger: {
             trigger: containerRef.current,
@@ -26,8 +23,8 @@ export default function ServicesMatrix() {
           y: 0,
           opacity: 1,
           duration: 1.2,
-          stagger: 0.15,
-          ease: 'power3.out'
+          stagger: 0.1,
+          ease: 'power2.out'
         }
       );
     }, containerRef);

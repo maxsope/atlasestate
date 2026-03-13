@@ -25,8 +25,8 @@ export default function Goal() {
         { scaleX: 1, duration: 1.5, ease: 'power3.inOut', transformOrigin: 'left center' }
       )
       .fromTo(textRef.current.children, 
-        { y: 30, opacity: 0 }, 
-        { y: 0, opacity: 1, duration: 1, stagger: 0.2, ease: 'power3.out' },
+        { y: 20, opacity: 0 }, 
+        { y: 0, opacity: 1, duration: 1, stagger: 0.2, ease: 'power2.out' },
         "-=0.5"
       );
     }, containerRef);

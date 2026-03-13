@@ -21,8 +21,8 @@ export default function CTA() {
         }
       });
 
-      tl.fromTo(textRef.current, { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: 'power3.out' })
-        .fromTo(btnRef.current, { scale: 0.9, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.8, ease: 'elastic.out(1, 0.5)' }, "-=0.5");
+      tl.fromTo(textRef.current, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: 'power2.out' })
+        .fromTo(btnRef.current, { scale: 0.9, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.8, ease: 'power2.out' }, "-=0.5");
     }, containerRef);
     return () => ctx.revert();
   }, []);

@@ -26,8 +26,8 @@ export default function ROI() {
 
       // 1. Появление всего дашборда
       tl.fromTo(mathRef.current, 
-        { y: 50, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1, ease: 'power3.out' }
+        { y: 30, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1, ease: 'power2.out' }
       );
 
       // 2. Появление убыточного сценария слева

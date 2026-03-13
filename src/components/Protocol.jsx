@@ -14,16 +14,16 @@ export default function Protocol() {
     let ctx = gsap.context(() => {
       itemsRef.current.forEach((card, i) => {
         gsap.fromTo(card, 
-          { y: 100, opacity: 0 },
+          { y: 50, opacity: 0 },
           {
             scrollTrigger: {
               trigger: card,
-              start: 'top 80%',
+              start: 'top 85%',
             },
             y: 0,
             opacity: 1,
-            duration: 1,
-            ease: 'power3.out'
+            duration: 1.2,
+            ease: 'power2.out'
           }
         );
       });
