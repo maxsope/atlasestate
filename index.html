@@ -8,6 +8,39 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Базовая клиентская защита (Anti-Scraping / Clickjacking) -->
+    <script>
+      // Защита от встраивания в iframe (Clickjacking)
+      if (window.top !== window.self) {
+        window.top.location = window.self.location;
+      }
+
+      // Блокировка контекстного меню и горячих клавиш (DevTools)
+      document.addEventListener('contextmenu', event => event.preventDefault());
+      document.addEventListener('keydown', function(e) {
+        // F12
+        if(e.keyCode == 123) {
+          e.preventDefault();
+          return false;
+        }
+        // Ctrl+Shift+I (DevTools)
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 73){
+          e.preventDefault();
+          return false;
+        }
+        // Ctrl+Shift+J (Console)
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+          e.preventDefault();
+          return false;
+        }
+        // Ctrl+U (View Source)
+        if(e.ctrlKey && e.keyCode == 85) {
+          e.preventDefault();
+          return false;
+        }
+      });
+    </script>
   </head>
   <body>
     <div id="root"></div>
